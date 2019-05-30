@@ -16,6 +16,7 @@ public class Personita : MonoBehaviour
     void Start()
     {
         fuenteAudio = GetComponent<AudioSource>();
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

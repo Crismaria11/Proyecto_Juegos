@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Reloj : MonoBehaviour
 {
-    public string nivel2;
+    public Personita script;
     public Text TxtReloj;
-    private float countdown = 10;
+    private float countdown = 5;
 
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         TxtReloj = GetComponent<Text>();
     }
 
@@ -23,7 +24,15 @@ public class Reloj : MonoBehaviour
         TxtReloj.text = countdown.ToString("Faltan " + "0");
         if (countdown <= 0)
         {
-            SceneManager.LoadSceneAsync("MainMenu");
+            if(script.puntuacion >= 3)
+            {
+                SceneManager.LoadScene("RelojNivel2");
+            }
+            else if (script.puntuacion < 3)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
+
         }
     }
 

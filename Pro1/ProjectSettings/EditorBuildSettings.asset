@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/LaberintoScene.unity
-    guid: bcae7cf7fa8fb4eee9a2b73a272d1bb3
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 7b56850c24a4c4ff4b23c769234d5bcf
   - enabled: 1
     path: Assets/Scenes/RelojNivel1.unity
     guid: f2f18f678332b48458bb0e9c5ab081bf
+  - enabled: 1
+    path: Assets/Scenes/RelojNivel2.unity
+    guid: 5cbf93ea110d34f1d92509981055ccaa
   m_configObjects: {}
