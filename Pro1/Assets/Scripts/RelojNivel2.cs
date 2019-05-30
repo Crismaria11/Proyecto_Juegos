@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Reloj : MonoBehaviour
+public class RelojNivel2 : MonoBehaviour
 {
     public Personita script;
     public Text TxtReloj;
-    private float countdown = 5;
-
+    private float countdown = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +23,9 @@ public class Reloj : MonoBehaviour
         TxtReloj.text = countdown.ToString("Faltan " + "0");
         if (countdown <= 0)
         {
-            if(script.puntuacion >= 3)
+            if (script.puntuacion >= 3)
             {
-                SceneManager.LoadScene("RelojNivel2");
+                SceneManager.LoadScene("MainMenu");
             }
             else if (script.puntuacion < 3)
             {
@@ -35,8 +34,4 @@ public class Reloj : MonoBehaviour
 
         }
     }
-
-
-
-
 }
